@@ -109,29 +109,29 @@ class Add extends React.Component {
       <form name="addTraveller" onSubmit={this.handleSubmit}>
         {/*Q4. Enter passenger details here. The following is an example.*/}
         <label>Full Name: </label>
-        <input type="text" name="travellerName"/>
+        <input type="text" name="travellerName" required/>
 
         <label>Contact Number: </label>
-        <input type="text" name="travellerPhone"/>
+        <input type="text" name="travellerPhone" required/>
 
         <label>Email Address: </label>
-        <input type="text" name="travellerEmail"/>
+        <input type="text" name="travellerEmail" required/>
 
         <label>Age: </label>
-        <input type="text" name="travellerAge"/>
+        <input type="text" name="travellerAge" required/>
 
         <label>Passport ID: </label>
-        <input type="text" name="travellerPassport"/>
+        <input type="text" name="travellerPassport" required/>
 
         <label>Gender: </label>
-        <select name="travellerGender">
+        <select name="travellerGender" required>
           <option key="male" value="male">Male</option>
           <option key="female" value="female">Female</option>
           <option key="others" value="others">Others</option>
         </select>
 
         <label>Seat Number: </label>
-        <select name="travellerSeat">
+        <select name="travellerSeat" required>
           {this.props.seats[0].seats.map((row, rowIndex) => (
             row.map((seat, colIndex) => (
               <option key={`0${colIndex + 1}${String.fromCharCode(65 + rowIndex)}`} value={`0${colIndex + 1}${String.fromCharCode(65 + rowIndex)}`}>
